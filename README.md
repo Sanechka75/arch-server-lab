@@ -7,34 +7,34 @@
 
 ## О проекте
 
-Этот репозиторий — результат подготовки к стажировке в **Ядро** / **Aquarius**.
-Здесь я собираю скрипты и конфиги для серверного администрирования.
+Этот репозиторий — результат подготовки к стажировке в **Ядро** / **Aquarius**.  
+Здесь я собираю скрипты и конфиги для серверного администрирования.  
 
-Уже реализовано:
-- Bash-скрипт мониторинга сервера
-- Логирование состояния (CPU, RAM, диск, сеть, температура)
-- Автоматический запуск через cron
+Уже реализовано:  
+- Bash-скрипт мониторинга сервера  
+- Логирование состояния (CPU, RAM, диск, сеть, температура)  
+- Автоматический запуск через cron  
 
-В планах:
-- Ansible playbook для установки nginx
-- Docker-compose (nginx + php + postgres)
-- GitHub Actions CI для проверки скриптов
+В планах:  
+- Ansible playbook для установки nginx  
+- Docker-compose (nginx + php + postgres)  
+- GitHub Actions CI для проверки скриптов  
 
 ## Быстрый старт
 
-git clone https://github.com/Sanechka75/arch-server-lab.git
-cd arch-server-lab
-chmod +x server_health_check.sh
-./server_health_check.sh
-Скрипт мониторинга
+git clone https://github.com/Sanechka75/arch-server-lab.git  
+cd arch-server-lab  
+chmod +x server_health_check.sh  
+./server_health_check.sh  
+Скрипт мониторинга  
 
 Что проверяет:
 
-· Загрузку CPU
-· Использование памяти
-· Занятость диска (/)
-· Температуру процессора (через lm_sensors)
-· Сеть (пинг до 8.8.8.8)
+· Загрузку CPU  
+· Использование памяти  
+· Занятость диска (/)  
+· Температуру процессора (через lm_sensors)  
+· Сеть (пинг до 8.8.8.8)  
 
 Пример вывода:
 
@@ -49,10 +49,10 @@ Network: + online
 
 crontab -e
 # Добавить строку (запуск каждые 30 минут):
-*/30 * * * * /home/sashka/MyFiles/GitProjects/arch-server-lab/server_health_check.sh
-Логи пишутся в ~/server_health.log. Просмотр в реальном времени:
+*/30 * * * * /home/sashka/MyFiles/GitProjects/arch-server-lab/server_health_check.sh  
+Логи пишутся в ~/server_health.log. Просмотр в реальном времени:  
 
-tail -f ~/server_health.log
+tail -f ~/server_health.log  
 Технологии
 
 Технология Назначение
