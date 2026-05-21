@@ -38,14 +38,14 @@ chmod +x server_health_check.sh
 
 Пример вывода:
 
-=== HEALTH REPORT ===
-CPU: load 0.15 / 4 cores +
-Memory: 31% used (3147 MB free) +
-Disk /: 68% used +
-Temp: 45.0°C
-Network: + online
+=== HEALTH REPORT ===  
+CPU: load 0.15 / 4 cores +  
+Memory: 31% used (3147 MB free) +  
+Disk /: 68% used +  
+Temp: 45.0°C  
+Network: + online  
 
-Автоматический запуск (cron)
+Автоматический запуск (cron)  
 
 crontab -e
 # Добавить строку (запуск каждые 30 минут):
@@ -53,18 +53,18 @@ crontab -e
 Логи пишутся в ~/server_health.log. Просмотр в реальном времени:  
 
 tail -f ~/server_health.log  
-Технологии
+Технологии  
 
-Технология Назначение
-Arch Linux Основная ОС
-Bash Скрипты
-lm_sensors Датчики температуры
-cron Планировщик задач
-Git/GitHub Версионирование
+Технология Назначение  
+Arch Linux Основная ОС  
+Bash Скрипты  
+lm_sensors Датчики температуры  
+cron Планировщик задач  
+Git/GitHub Версионирование  
 
 **Автор**
 
-Студент 1 курса, Прикладная информатика.
-Подготовка к стажировке в Ядро / Aquarius.
+Студент 1 курса, Прикладная информатика.  
+Подготовка к стажировке в Ядро / Aquarius.  
 
-GitHub: Sanechka75
+GitHub: Sanechka75  
