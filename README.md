@@ -11,16 +11,16 @@
 Здесь я собираю скрипты и конфиги для серверного администрирования.
 
 Уже реализовано:
-- + Bash-скрипт мониторинга сервера
-- + Логирование состояния (CPU, RAM, диск, сеть, температура)
-- + Автоматический запуск через cron
+- Bash-скрипт мониторинга сервера
+- Логирование состояния (CPU, RAM, диск, сеть, температура)
+- Автоматический запуск через cron
 
 В планах:
 - Ansible playbook для установки nginx
 - Docker-compose (nginx + php + postgres)
 - GitHub Actions CI для проверки скриптов
 
-## 🚀 Быстрый старт
+## Быстрый старт
 
 git clone https://github.com/Sanechka75/arch-server-lab.git
 cd arch-server-lab
@@ -89,12 +89,3 @@ GitHub: Sanechka75
 | Нет ссылки на профиль | Ссылка на GitHub |
 
 ---
-
-## Залей обновлённый README на GitHub
-
-bash
-cd ~/MyFiles/GitProjects/arch-server-lab
-git add README.md
-git commit -m "docs: improve README with badges and better structure"
-git push
-`
