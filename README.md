@@ -45,12 +45,14 @@ Disk /: 68% used +
 Temp: 45.0°C  
 Network: + online  
 
-Автоматический запуск (cron)  
-
-crontab -e
 # Добавить строку (запуск каждые 30 минут):
-*/30 * * * * /home/sashka/MyFiles/GitProjects/arch-server-lab/server_health_check.sh  
-Логи пишутся в ~/server_health.log. Просмотр в реальном времени:  
+*/30 * * * * /home/sashka/MyFiles/GitProjects/arch-server-lab/server_health_check.sh   
+Логи пишутся в ~/server_health.log  
+Автоматический запуск (cron)   
+
+crontab -e  
+
+Просмотр в реальном времени:  
 
 tail -f ~/server_health.log  
 Технологии  
