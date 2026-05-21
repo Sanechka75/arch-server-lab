@@ -3,7 +3,7 @@
 LOG_FILE="/home/sashka/server_health.log"
 
 log_to_file(){
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "LOG_FILE"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "$LOG_FILE"
 }
 
 # uptime даст фулл строку (время, пользователи, load average 0.12, 0.06, 0.05)
@@ -107,7 +107,7 @@ fi
 REPORT="=== HEALTH REPORT ===
 CPU: load $CPU_LOAD / $CPU_CORES cores $CPU_STATUS
 Memory: $MEM_USED_PERCENT% used ($MEM_AVAIL MB free) $MEM_STATUS
-Disk /: $DISC_USAGE% used $DISC_STATUS
+Disk /: $DISK_USAGE% used $DISC_STATUS
 Temp: $TEMP
 Network: $NETWORK_STATUS
 "
