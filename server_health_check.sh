@@ -102,7 +102,16 @@ if [ $NETWORK_OK -ne 0 ]; then
     NETWORK_STATUS="- offline"
 fi
 
-# некий ответ
+# --sort= - опция сортировки в ps
+# -%cpu - сортировать от больших к меньшим (-), а + соответственно от меньших к большим
+#head -4 - берет первые 4 строки (заголовок и топ 3 по CPU)
+# tail -n +2 - берет строки, начиная со второй (заголовок gg)
+# awk - разбивает каждую строку на поля (по пробелам)
+# так же можно использовать awk для пропуска 1 строки:
+# CPU_TOP3=$(ps aux --sort=-%cpu | awk 'NR>1 && NR<4 {print $1, $2, $3, $11}')
+CPU_TOP3=$(ps aux --sort=-%cpu | head -4 | tail -n +2 | awk '{print $1, $2, $3, $11}')
+
+# некий отчет
 # в переменную REPORT пихаем много текста и найденных ранее значений
 REPORT="=== HEALTH REPORT ===
 CPU: load $CPU_LOAD / $CPU_CORES cores $CPU_STATUS
@@ -110,6 +119,8 @@ Memory: $MEM_USED_PERCENT% used ($MEM_AVAIL MB free) $MEM_STATUS
 Disk /: $DISK_USAGE% used $DISC_STATUS
 Temp: $TEMP
 Network: $NETWORK_STATUS
+TOP 3 PROCESSES BY CPU:
+$CPU_TOP3
 "
 
 # echo выводит на экран
