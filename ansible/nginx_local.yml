@@ -1,0 +1,17 @@
+---
+- name: Установка nginx на Arch linux (локально)
+  hosts: localhost
+  connection: local
+  become: yes
+
+  tasks:
+    - name: Установить nginx
+      pacman:
+        name: nginx
+        state: present
+
+    - name:
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes

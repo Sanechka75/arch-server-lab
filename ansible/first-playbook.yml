@@ -1,0 +1,11 @@
+---
+- name: Мой первый плейбук
+  hosts: localhost
+  connection: local
+  become: yes
+
+  tasks:
+    - name: Установать mc (Midnight Commander)
+      pacman:
+        name: mc
+        state: present
