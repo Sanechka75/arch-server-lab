@@ -1,0 +1,19 @@
+---
+- name: Deploy my website to nginx
+  hosts: localhost
+  connection: local
+  become: yes
+
+  tasks:
+    - name: Copy index.html to nginx directory
+      copy:
+        src: /home/sashka/MyFiles/GitProjects/my-website/index.html
+        dest: /usr/share/nginx/html/index.html
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Restart nginx
+      systemd:
+        name: nginx
+        state: restarted
