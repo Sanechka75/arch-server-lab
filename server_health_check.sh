@@ -1,6 +1,6 @@
 # !/usr/bin/env bash
 
-LOG_FILE="/home/sashka/server_health.log"
+LOG_FILE="/home/sashka/LogFiles/server_health.log"
 
 # вообще echo выводит на экран, но мы перенаправляем >> в файл
 # - (просто текст)
